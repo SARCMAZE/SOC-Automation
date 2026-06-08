@@ -1,0 +1,883 @@
+{
+  "generated_at": "2026-06-08T03:35:12.107973Z",
+  "summary": "L3 hybrid incident report for linked attack clusters and repeating risk factors.",
+  "incident_count": 10,
+  "incidents": [
+    {
+      "incident_id": "L3-INC-01",
+      "primary_ip": "172.16.0.1",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 172.16.0.1 with 52 events and 52 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "192.168.10.50"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "172.16.0.1",
+            "dst_ip": "192.168.10.50",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:15",
+            "flow_bytes_s": 5573754.789,
+            "flow_packets_s": 5268.199234,
+            "total_packets": 11.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 7,
+              "confidence_score": 0.9,
+              "explanation": "Potential web attack detected from IP address 172.16.0.1 to port 80 on 192.168.10.50, flagged as MEDIUM severity.",
+              "recommendation": "Block the source IP and monitor for further suspicious activity."
+            }
+          },
+          {
+            "src_ip": "172.16.0.1",
+            "dst_ip": "192.168.10.50",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:15",
+            "flow_bytes_s": 5306885.545,
+            "flow_packets_s": 5015.959872,
+            "total_packets": 11.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected from IP address 172.16.0.1 to port 80 on 192.168.10.50, flagged as MEDIUM severity.",
+              "recommendation": "Further investigation and monitoring recommended."
+            }
+          },
+          {
+            "src_ip": "172.16.0.1",
+            "dst_ip": "192.168.10.50",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:15",
+            "flow_bytes_s": 4723214.286,
+            "flow_packets_s": 4464.285714,
+            "total_packets": 11.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected from IP address 172.16.0.1 to port 80 on 192.168.10.50, flagged as MEDIUM severity.",
+              "recommendation": "Block the IP address and monitor for further suspicious activity."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "persistently high risk score"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-02",
+      "primary_ip": "192.168.10.50",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 192.168.10.50 with 52 events and 52 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "172.16.0.1"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "172.16.0.1",
+            "dst_ip": "192.168.10.50",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:15",
+            "flow_bytes_s": 5573754.789,
+            "flow_packets_s": 5268.199234,
+            "total_packets": 11.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 7,
+              "confidence_score": 0.9,
+              "explanation": "Potential web attack detected from IP address 172.16.0.1 to port 80 on 192.168.10.50, flagged as MEDIUM severity.",
+              "recommendation": "Block the source IP and monitor for further suspicious activity."
+            }
+          },
+          {
+            "src_ip": "172.16.0.1",
+            "dst_ip": "192.168.10.50",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:15",
+            "flow_bytes_s": 5306885.545,
+            "flow_packets_s": 5015.959872,
+            "total_packets": 11.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected from IP address 172.16.0.1 to port 80 on 192.168.10.50, flagged as MEDIUM severity.",
+              "recommendation": "Further investigation and monitoring recommended."
+            }
+          },
+          {
+            "src_ip": "172.16.0.1",
+            "dst_ip": "192.168.10.50",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:15",
+            "flow_bytes_s": 4723214.286,
+            "flow_packets_s": 4464.285714,
+            "total_packets": 11.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected from IP address 172.16.0.1 to port 80 on 192.168.10.50, flagged as MEDIUM severity.",
+              "recommendation": "Block the IP address and monitor for further suspicious activity."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "persistently high risk score"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-03",
+      "primary_ip": "192.168.10.19",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 192.168.10.19 with 20 events and 20 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "104.97.74.244",
+          "203.205.158.25",
+          "210.160.193.188",
+          "63.144.176.8",
+          "77.67.51.98"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.19",
+            "dst_ip": "104.97.74.244",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:41",
+            "flow_bytes_s": 7879.320756,
+            "flow_packets_s": 5.867586576,
+            "total_packets": 685.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.19 to IP address 104.97.74.244, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential malicious activity."
+            }
+          },
+          {
+            "src_ip": "192.168.10.19",
+            "dst_ip": "210.160.193.188",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:58",
+            "flow_bytes_s": 2455341.506,
+            "flow_packets_s": 8756.567426,
+            "total_packets": 5.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unusual IP address.",
+              "recommendation": "Monitor the connection and consider blocking the IP if suspicious activity continues."
+            }
+          },
+          {
+            "src_ip": "192.168.10.19",
+            "dst_ip": "63.144.176.8",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:10",
+            "flow_bytes_s": 3664.384087,
+            "flow_packets_s": 3.362950746,
+            "total_packets": 393.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected from IP address 192.168.10.19 to port 80 on server at IP address 63.144.176.8.",
+              "recommendation": "Block the traffic and investigate further."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "clustered attacker infrastructure",
+        "persistently high risk score"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-04",
+      "primary_ip": "192.168.10.16",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 192.168.10.16 with 12 events and 12 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "173.194.131.76",
+          "72.21.91.103",
+          "93.184.216.135"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.16",
+            "dst_ip": "173.194.131.76",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:53",
+            "flow_bytes_s": 3470382.338,
+            "flow_packets_s": 2826.953942,
+            "total_packets": 1860.0,
+            "l1_score": 11,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.9,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.16, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further to determine the intent behind the scan."
+            }
+          },
+          {
+            "src_ip": "192.168.10.16",
+            "dst_ip": "93.184.216.135",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 3:07",
+            "flow_bytes_s": 3636.336244,
+            "flow_packets_s": 2.964637749,
+            "total_packets": 342.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected from IP address 192.168.10.16 to port 80 on 93.184.216.135, flagged as MEDIUM severity.",
+              "recommendation": "Further investigation and monitoring recommended."
+            }
+          },
+          {
+            "src_ip": "192.168.10.16",
+            "dst_ip": "72.21.91.103",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:02",
+            "flow_bytes_s": 21052.13791,
+            "flow_packets_s": 16.68577479,
+            "total_packets": 1986.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.16 to 72.21.91.103, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential reconnaissance or scanning activity."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "clustered attacker infrastructure",
+        "persistently high risk score"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-05",
+      "primary_ip": "192.168.10.14",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 192.168.10.14 with 12 events and 12 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "23.194.140.95",
+          "52.84.145.48"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.14",
+            "dst_ip": "23.194.140.95",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:48",
+            "flow_bytes_s": 517579.3103,
+            "flow_packets_s": 482.1254509,
+            "total_packets": 1148.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 7,
+              "confidence_score": 0.85,
+              "explanation": "Potential web attack detected on port 80 from IP address 192.168.10.14 to 23.194.140.95, flagged as MEDIUM severity.",
+              "recommendation": "Further investigation and monitoring recommended."
+            }
+          },
+          {
+            "src_ip": "192.168.10.14",
+            "dst_ip": "52.84.145.48",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:34",
+            "flow_bytes_s": 12121.6511,
+            "flow_packets_s": 10.07244308,
+            "total_packets": 1188.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 7,
+              "confidence_score": 0.85,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.14 to 52.84.145.48, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential reconnaissance or scanning activity."
+            }
+          },
+          {
+            "src_ip": "192.168.10.14",
+            "dst_ip": "23.194.140.95",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:48",
+            "flow_bytes_s": 647863.4221,
+            "flow_packets_s": 552.1154619,
+            "total_packets": 2280.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "HTTP Flood",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "The flow shows a high volume of packets and bytes sent to the destination IP address, indicating a potential HTTP flood attack.",
+              "recommendation": "Block the source IP address at the network perimeter."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "clustered attacker infrastructure"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-06",
+      "primary_ip": "192.168.10.17",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 192.168.10.17 with 12 events and 12 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "122.225.115.200",
+          "122.225.115.206"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.17",
+            "dst_ip": "122.225.115.200",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:06",
+            "flow_bytes_s": 2552677.029,
+            "flow_packets_s": 8635.578584,
+            "total_packets": 5.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unknown IP address.",
+              "recommendation": "Monitor and investigate further to determine the intent of the scan."
+            }
+          },
+          {
+            "src_ip": "192.168.10.17",
+            "dst_ip": "122.225.115.206",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:06",
+            "flow_bytes_s": 2325434.439,
+            "flow_packets_s": 6319.115324,
+            "total_packets": 4.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unusual IP address.",
+              "recommendation": "Monitor the connection and consider blocking the IP if suspicious activity continues."
+            }
+          },
+          {
+            "src_ip": "192.168.10.17",
+            "dst_ip": "122.225.115.206",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:06",
+            "flow_bytes_s": 2374193.548,
+            "flow_packets_s": 6451.612903,
+            "total_packets": 4.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unknown IP address.",
+              "recommendation": "Monitor and investigate further to determine the intent of the scan."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "clustered attacker infrastructure",
+        "persistently high risk score"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-07",
+      "primary_ip": "192.168.10.5",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 192.168.10.5 with 8 events and 8 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "151.101.65.179"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.5",
+            "dst_ip": "151.101.65.179",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:36",
+            "flow_bytes_s": 755034.4241,
+            "flow_packets_s": 762.9527182,
+            "total_packets": 251.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.5 to 151.101.65.179, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential malicious activity."
+            }
+          },
+          {
+            "src_ip": "192.168.10.5",
+            "dst_ip": "151.101.65.179",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:36",
+            "flow_bytes_s": 1053265.841,
+            "flow_packets_s": 1048.639,
+            "total_packets": 376.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 7,
+              "confidence_score": 0.9,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.5 to IP address 151.101.65.179, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential reconnaissance or scanning activity."
+            }
+          },
+          {
+            "src_ip": "192.168.10.5",
+            "dst_ip": "151.101.65.179",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:36",
+            "flow_bytes_s": 755034.4241,
+            "flow_packets_s": 762.9527182,
+            "total_packets": 251.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.5 to 151.101.65.179, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential reconnaissance or scanning activity."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-08",
+      "primary_ip": "151.101.65.179",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 151.101.65.179 with 8 events and 8 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "192.168.10.5"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.5",
+            "dst_ip": "151.101.65.179",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:36",
+            "flow_bytes_s": 755034.4241,
+            "flow_packets_s": 762.9527182,
+            "total_packets": 251.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.5 to 151.101.65.179, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential malicious activity."
+            }
+          },
+          {
+            "src_ip": "192.168.10.5",
+            "dst_ip": "151.101.65.179",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:36",
+            "flow_bytes_s": 1053265.841,
+            "flow_packets_s": 1048.639,
+            "total_packets": 376.0,
+            "l1_score": 10,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 7,
+              "confidence_score": 0.9,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.5 to IP address 151.101.65.179, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential reconnaissance or scanning activity."
+            }
+          },
+          {
+            "src_ip": "192.168.10.5",
+            "dst_ip": "151.101.65.179",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:36",
+            "flow_bytes_s": 755034.4241,
+            "flow_packets_s": 762.9527182,
+            "total_packets": 251.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from IP address 192.168.10.5 to 151.101.65.179, flagged as MEDIUM severity.",
+              "recommendation": "Monitor and investigate further for potential reconnaissance or scanning activity."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-09",
+      "primary_ip": "23.194.140.95",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 23.194.140.95 with 8 events and 8 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "192.168.10.14"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.14",
+            "dst_ip": "23.194.140.95",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:48",
+            "flow_bytes_s": 517579.3103,
+            "flow_packets_s": 482.1254509,
+            "total_packets": 1148.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 7,
+              "confidence_score": 0.85,
+              "explanation": "Potential web attack detected on port 80 from IP address 192.168.10.14 to 23.194.140.95, flagged as MEDIUM severity.",
+              "recommendation": "Further investigation and monitoring recommended."
+            }
+          },
+          {
+            "src_ip": "192.168.10.14",
+            "dst_ip": "23.194.140.95",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:48",
+            "flow_bytes_s": 647863.4221,
+            "flow_packets_s": 552.1154619,
+            "total_packets": 2280.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "HTTP Flood",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "The flow shows a high volume of packets and bytes sent to the destination IP address, indicating a potential HTTP flood attack.",
+              "recommendation": "Block the source IP address at the network perimeter."
+            }
+          },
+          {
+            "src_ip": "192.168.10.14",
+            "dst_ip": "23.194.140.95",
+            "dst_port": 80,
+            "protocol": 6,
+            "timestamp": "7/7/2017 1:48",
+            "flow_bytes_s": 647863.4221,
+            "flow_packets_s": 552.1154619,
+            "total_packets": 2280.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "Web Attack",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential web attack detected on port 80 from IP address 192.168.10.14 to 23.194.140.95, flagged as MEDIUM severity.",
+              "recommendation": "Further investigation and monitoring recommended."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    },
+    {
+      "incident_id": "L3-INC-10",
+      "primary_ip": "122.225.115.206",
+      "severity": "critical",
+      "summary": "Related incident cluster centered on 122.225.115.206 with 8 events and 8 confirmed risk hits.",
+      "details": {
+        "dataset_status": null,
+        "geolocation": null,
+        "accounts": [],
+        "related_ips": [
+          "192.168.10.17"
+        ],
+        "sample_events": [
+          {
+            "src_ip": "192.168.10.17",
+            "dst_ip": "122.225.115.206",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:06",
+            "flow_bytes_s": 2325434.439,
+            "flow_packets_s": 6319.115324,
+            "total_packets": 4.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unusual IP address.",
+              "recommendation": "Monitor the connection and consider blocking the IP if suspicious activity continues."
+            }
+          },
+          {
+            "src_ip": "192.168.10.17",
+            "dst_ip": "122.225.115.206",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:06",
+            "flow_bytes_s": 2374193.548,
+            "flow_packets_s": 6451.612903,
+            "total_packets": 4.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unknown IP address.",
+              "recommendation": "Monitor and investigate further to determine the intent of the scan."
+            }
+          },
+          {
+            "src_ip": "192.168.10.17",
+            "dst_ip": "122.225.115.206",
+            "dst_port": 443,
+            "protocol": 6,
+            "timestamp": "7/7/2017 2:06",
+            "flow_bytes_s": 2325434.439,
+            "flow_packets_s": 6319.115324,
+            "total_packets": 4.0,
+            "l1_score": 9,
+            "severity": "MEDIUM",
+            "status": "flagged",
+            "l2_analysis": {
+              "attack_type": "SSL/TLS Scan",
+              "risk_score": 8,
+              "confidence_score": 0.7,
+              "explanation": "Potential SSL/TLS scan detected on port 443 from an unusual IP address.",
+              "recommendation": "Monitor the connection and consider blocking the IP if suspicious activity continues."
+            }
+          }
+        ]
+      },
+      "common_pattern": [
+        "multiple high-risk events",
+        "persistently high risk score"
+      ],
+      "recommended_action": [
+        "Block or ban primary IP at the edge firewall",
+        "Quarantine associated accounts and force credential reset",
+        "Add primary IP and related IP cluster to L3 context dataset blacklist",
+        "Monitor the ASN/geolocation cluster for follow-up access attempts"
+      ]
+    }
+  ],
+  "dataset_records": 10,
+  "top_blacklist_ips": [
+    "198.51.100.45",
+    "203.0.113.88",
+    "203.0.113.159",
+    "198.51.100.99",
+    "203.0.112.110"
+  ]
+}
